@@ -1,0 +1,61 @@
+﻿@model TestMvcApp.Models.User
+@{
+    ViewBag.Title = "Login";
+}
+<body>
+    <h2>Login</h2>
+    @using (Html.BeginForm("AddUser", "User", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <label>Username</label>
+        @Html.TextAreaFor(T => T.Username, new { @class = "form-control" }) <br />
+        <label>Username</label>
+        @Html.TextAreaFor(T => T.Password, new { @class = "form-control" }) <br />
+        <label>Dropdown</label>
+        @Html.DropDownListFor(T => T.DropdownVal, Model.UserType, new { @class = "form-control", @id = "ddlusertype", @Name = "param" }) <br />
+
+
+
+        @Html.DropDownListFor(T => T.GenderDropdown,
+                            new SelectList(new List<Object>
+                            {
+                               new { Value = "M" , Text = "Male" },
+                               new { Value = "F" , Text = "Female" },
+                            }, "Value", "Text"),
+                            new { @class = "form-control form-control-solid form-control-lg", @id = "ddlGender" })
+
+        <br />
+
+        <label>checkbox</label>
+        @Html.RadioButtonFor(T => T.GenderRadio, "M", new { @id = "male", @checked = "checked" })
+        <span>Male</span>
+        @Html.RadioButtonFor(T => T.GenderRadio, "F", new { @id = "female" })
+        <span>Female</span>
+
+        <div class="table-responsive">
+            <table class="table table-sm font-size-sm">
+                <thead>
+                    <tr>
+                        <th>User Type id</th>
+                        <th>User Type</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in TempData["UserType"] as List<TestMvcApp.Models.User>) 
+                    {
+                        <tr>
+                            <td>@item.Username</td>
+                            <td>@item.UserType</td>
+                            
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <button id="kt_login_signin_submit" class="btn btn-success font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
+    }
+</body>
