@@ -55,21 +55,24 @@ namespace TestMvcApp.Controllers
         public ActionResult Login()
         {
             DBHelper db = new DBHelper();
-             
+            DataTable dt = new DataTable();
             User u = new User();
-            u.UserType= DataHelper.DT2SelectList(db.ExecuteQueryData("SELECT USER_TYPE_ID, USER_TYPE_DESC FROM HICL_SP_USERTYPE", CommandType.Text), "USER_TYPE_ID", "USER_TYPE_DESC");
-           TempData["UserType"] = u;
-            
+            u.UserType = DataHelper.DT2SelectList(db.ExecuteQueryData("SELECT USER_TYPE_ID, USER_TYPE_DESC FROM HICL_SP_USERTYPE", CommandType.Text), "USER_TYPE_ID", "USER_TYPE_DESC");
+            dt = db.ExecuteQueryData("SELECT USER_TYPE_ID, USER_TYPE_DESC FROM HICL_SP_USERTYPE", CommandType.Text);
+
+
+            ViewBag.UserType = u.UserType;
+            ViewBag.UserTypedt = dt.AsEnumerable();
             return View(u);
 
-           
+
 
         }
         public ActionResult AddUser(User u)
         {
             string a = u.Username;
             string b = u.Username;
-            int c = u.DropdownVal;
+            string c = u.DropdownVal;
             string d = u.GenderDropdown;
             string e = u.GenderRadio;
             return RedirectToAction("Login", "User");

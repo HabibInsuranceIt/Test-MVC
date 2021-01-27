@@ -1,0 +1,107 @@
+﻿@model IEnumerable<TestMvcApp.Models.ClsClaimOfficer>
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+<div class="row page-titles" style="padding-bottom: 7px;">
+    <div class="col-md-5 align-self-center ViewTitle">
+        <h3 class="text-themecolor" style="font-weight: 800">Claim Officer List</h3>
+    </div>
+    <div class="col-md-7 align-self-center ViewTitle">
+        <div class="ViewTitleLeft">
+        </div>
+    </div>
+
+</div>
+<div class="page-titles">
+    <div class="container-fluid">
+        <br />
+        <div class="row">
+            <div class="col-lg-12">
+                @Html.ActionLink("Add New", "Create", new { @class = "btn btn-danger" })
+                @*<button id="btnAddClaimOfficer" style="float:right;margin-left:5px" type="button" class="btn btn-danger"><i class="fa fa-plus"></i>Add New</button>*@
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-12">
+
+
+                <div class="table-responsive m-t-40">
+                    <table id="tblClaimOfficerView" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Name</th>
+                                <th>Location</th>
+                                <th>Active Status</th>
+                                <th>DateTime</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Claim_officer_idx)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Username)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Location)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Datetime)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ActiveStatus)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                        @Html.ActionLink("Details", "Details", new {  id=item.Claim_officer_idx }) |
+                                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+           
+
+
+
+        });
+    </script>
+}
+
+
+
+

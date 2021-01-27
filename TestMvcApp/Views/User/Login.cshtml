@@ -1,4 +1,5 @@
-﻿@model TestMvcApp.Models.User
+﻿@model TestMvcApp.Models.User 
+
 @{
     ViewBag.Title = "Login";
 }
@@ -11,17 +12,20 @@
         <label>Username</label>
         @Html.TextAreaFor(T => T.Password, new { @class = "form-control" }) <br />
         <label>Dropdown</label>
-        @Html.DropDownListFor(T => T.DropdownVal, Model.UserType, new { @class = "form-control", @id = "ddlusertype", @Name = "param" }) <br />
+        @*@Html.DropDownListFor(T => T.DropdownVal, new SelectList(Model.UserType, "Value", "Text"), "Select User Type..", new { @class = "form-control", @id = "ddlusertype", @Name = "param" }) <br />*@
+        @Html.DropDownListFor(T => T.DropdownVal, new SelectList(Model.UserType, "Value", "Text"), "Select User Type..", new { @class = "form-control", @id = "ddlusertype" }) <br />
+
+
 
 
 
         @Html.DropDownListFor(T => T.GenderDropdown,
                             new SelectList(new List<Object>
-                            {
-                               new { Value = "M" , Text = "Male" },
-                               new { Value = "F" , Text = "Female" },
-                            }, "Value", "Text"),
-                            new { @class = "form-control form-control-solid form-control-lg", @id = "ddlGender" })
+            {
+            new { Value = "M" , Text = "Male" },
+            new { Value = "F" , Text = "Female" },
+            }, "Value", "Text"),
+            new { @class = "form-control form-control-solid form-control-lg", @id = "ddlGender" })
 
         <br />
 
@@ -31,6 +35,8 @@
         @Html.RadioButtonFor(T => T.GenderRadio, "F", new { @id = "female" })
         <span>Female</span>
 
+
+        <label> List Table Bind</label>
         <div class="table-responsive">
             <table class="table table-sm font-size-sm">
                 <thead>
@@ -41,12 +47,12 @@
                 </thead>
 
                 <tbody>
-                    @foreach (var item in TempData["UserType"] as List<TestMvcApp.Models.User>) 
+                    @foreach (var item in Model.UserType)
                     {
                         <tr>
-                            <td>@item.Username</td>
-                            <td>@item.UserType</td>
-                            
+                            <td>@item.Value</td>
+                            <td>@item.Text</td>
+
                         </tr>
 
                     }
@@ -54,8 +60,7 @@
             </table>
         </div>
 
-
-
+       
         <button id="kt_login_signin_submit" class="btn btn-success font-weight-bolder font-size-h6 px-8 py-4 my-3 mr-3">Sign In</button>
     }
 </body>

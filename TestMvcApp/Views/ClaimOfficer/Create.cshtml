@@ -1,0 +1,73 @@
+﻿@model TestMvcApp.Models.ClsClaimOfficer
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "ClaimOfficer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+    <h4>ClsClaimOfficer</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+    <div class="form-group">
+        <label>User Name</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Location</label>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="switch">
+                <label style="font-weight: 700;">
+                   
+                    In Active    @Html.CheckBoxFor(model => model.Statusid,true)   <span class="lever" style="font-weight: 700;"></span>Active
+
+
+
+                </label>
+
+            </div>
+
+        </div>
+    </div>
+    <br />
+    @*<div class="form-group">
+        <label>Active Status</label>
+        <div class="col-md-10">
+
+
+            @Html.CheckBoxFor(model => model.Statusid, new { @checked = "checked" })
+            @Html.ValidationMessageFor(model => model.ActiveStatus, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

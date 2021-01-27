@@ -1,0 +1,784 @@
+
+
+.cardclaim {
+    border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333333;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+    .cardclaim .cardclaim-category:not([class*="text-"]) {
+        color: #999999;
+    }
+
+    .cardclaim .cardclaim-category {
+        margin-top: 10px;
+    }
+
+        .cardclaim .cardclaim-category .material-icons {
+            position: relative;
+            top: 8px;
+            line-height: 0;
+        }
+
+    .cardclaim .form-check {
+        margin-top: 5px;
+    }
+
+    .cardclaim .cardclaim-title {
+        margin-top: 0.625rem;
+    }
+
+        .cardclaim .cardclaim-title:last-child {
+            margin-bottom: 0;
+        }
+
+    .cardclaim.no-shadow .cardclaim-header-image,
+    .cardclaim.no-shadow .cardclaim-header-image img {
+        box-shadow: none !important;
+    }
+
+    .cardclaim .cardclaim-body,
+    .cardclaim .cardclaim-footer {
+        padding: 0.9375rem 1.875rem;
+    }
+
+        .cardclaim .cardclaim-body + .cardclaim-footer {
+            padding-top: 0rem;
+            border: 0;
+            border-radius: 6px;
+        }
+
+    .cardclaim .cardclaim-footer {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: 0;
+    }
+
+        .cardclaim .cardclaim-footer .author,
+        .cardclaim .cardclaim-footer .stats {
+            display: inline-flex;
+        }
+
+        .cardclaim .cardclaim-footer .stats {
+            color: #999999;
+        }
+
+            .cardclaim .cardclaim-footer .stats .material-icons {
+                position: relative;
+                top: -10px;
+                margin-right: 3px;
+                margin-left: 3px;
+                font-size: 18px;
+            }
+
+    .cardclaim.bmd-cardclaim-raised {
+        box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    }
+
+@media (min-width: 992px) {
+    .cardclaim.bmd-cardclaim-flat {
+        box-shadow: none;
+    }
+}
+
+.cardclaim .cardclaim-header {
+    border-bottom: none;
+    background: transparent;
+}
+
+    .cardclaim .cardclaim-header .title {
+        color: #fff;
+    }
+
+    .cardclaim .cardclaim-header .nav-tabs {
+        padding: 0;
+    }
+
+    .cardclaim .cardclaim-header.cardclaim-header-image {
+        position: relative;
+        padding: 0;
+        z-index: 1;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: -30px;
+        border-radius: 6px;
+    }
+
+        .cardclaim .cardclaim-header.cardclaim-header-image img {
+            width: 100%;
+            border-radius: 6px;
+            pointer-events: none;
+            box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cardclaim .cardclaim-header.cardclaim-header-image .cardclaim-title {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            font-size: 1.125rem;
+            text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+        }
+
+        .cardclaim .cardclaim-header.cardclaim-header-image .colored-shadow {
+            transform: scale(0.94);
+            top: 12px;
+            filter: blur(12px);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            z-index: -1;
+            transition: opacity .45s;
+            opacity: 0;
+        }
+
+        .cardclaim .cardclaim-header.cardclaim-header-image.no-shadow {
+            box-shadow: none;
+        }
+
+            .cardclaim .cardclaim-header.cardclaim-header-image.no-shadow.shadow-normal {
+                box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            }
+
+            .cardclaim .cardclaim-header.cardclaim-header-image.no-shadow .colored-shadow {
+                display: none !important;
+            }
+
+.cardclaim .cardclaim-header-primary .cardclaim-icon,
+.cardclaim .cardclaim-header-primary .cardclaim-text,
+.cardclaim .cardclaim-header-primary:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-primary,
+.cardclaim.cardclaim-rotate.bg-primary .front,
+.cardclaim.cardclaim-rotate.bg-primary .back {
+    background: linear-gradient(60deg, #ab47bc, #8e24aa);
+}
+
+.cardclaim .cardclaim-header-info .cardclaim-icon,
+.cardclaim .cardclaim-header-info .cardclaim-text,
+.cardclaim .cardclaim-header-info:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-info,
+.cardclaim.cardclaim-rotate.bg-info .front,
+.cardclaim.cardclaim-rotate.bg-info .back {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+}
+
+.cardclaim .cardclaim-header-success .cardclaim-icon,
+.cardclaim .cardclaim-header-success .cardclaim-text,
+.cardclaim .cardclaim-header-success:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-success,
+.cardclaim.cardclaim-rotate.bg-success .front,
+.cardclaim.cardclaim-rotate.bg-success .back {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+}
+
+.cardclaim .cardclaim-header-warning .cardclaim-icon,
+.cardclaim .cardclaim-header-warning .cardclaim-text,
+.cardclaim .cardclaim-header-warning:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-warning,
+.cardclaim.cardclaim-rotate.bg-warning .front,
+.cardclaim.cardclaim-rotate.bg-warning .back {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.cardclaim .cardclaim-header-danger .cardclaim-icon,
+.cardclaim .cardclaim-header-danger .cardclaim-text,
+.cardclaim .cardclaim-header-danger:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-danger,
+.cardclaim.cardclaim-rotate.bg-danger .front,
+.cardclaim.cardclaim-rotate.bg-danger .back {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+}
+
+.cardclaim .cardclaim-header-rose .cardclaim-icon,
+.cardclaim .cardclaim-header-rose .cardclaim-text,
+.cardclaim .cardclaim-header-rose:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim.bg-rose,
+.cardclaim.cardclaim-rotate.bg-rose .front,
+.cardclaim.cardclaim-rotate.bg-rose .back {
+    background: linear-gradient(60deg, #ec407a, #d81b60);
+}
+
+.cardclaim .cardclaim-header-primary .cardclaim-icon,
+.cardclaim .cardclaim-header-primary:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-primary .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+}
+
+.cardclaim .cardclaim-header-danger .cardclaim-icon,
+.cardclaim .cardclaim-header-danger:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-danger .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
+}
+
+.cardclaim .cardclaim-header-rose .cardclaim-icon,
+.cardclaim .cardclaim-header-rose:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-rose .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+}
+
+.cardclaim .cardclaim-header-warning .cardclaim-icon,
+.cardclaim .cardclaim-header-warning:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-warning .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+}
+
+.cardclaim .cardclaim-header-info .cardclaim-icon,
+.cardclaim .cardclaim-header-info:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-info .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
+}
+
+.cardclaim .cardclaim-header-success .cardclaim-icon,
+.cardclaim .cardclaim-header-success:not(.cardclaim-header-icon):not(.cardclaim-header-text),
+.cardclaim .cardclaim-header-success .cardclaim-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4);
+}
+
+.cardclaim [class*="cardclaim-header-"],
+.cardclaim[class*="bg-"] {
+    color: #fff;
+}
+
+    .cardclaim [class*="cardclaim-header-"] .cardclaim-title a,
+    .cardclaim [class*="cardclaim-header-"] .cardclaim-title,
+    .cardclaim [class*="cardclaim-header-"] .icon i,
+    .cardclaim[class*="bg-"] .cardclaim-title a,
+    .cardclaim[class*="bg-"] .cardclaim-title,
+    .cardclaim[class*="bg-"] .icon i {
+        color: #fff;
+    }
+
+    .cardclaim [class*="cardclaim-header-"] .icon i,
+    .cardclaim[class*="bg-"] .icon i {
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .cardclaim [class*="cardclaim-header-"] .author a,
+    .cardclaim [class*="cardclaim-header-"] .stats,
+    .cardclaim [class*="cardclaim-header-"] .cardclaim-category,
+    .cardclaim [class*="cardclaim-header-"] .cardclaim-description,
+    .cardclaim[class*="bg-"] .author a,
+    .cardclaim[class*="bg-"] .stats,
+    .cardclaim[class*="bg-"] .cardclaim-category,
+    .cardclaim[class*="bg-"] .cardclaim-description {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+        .cardclaim [class*="cardclaim-header-"] .author a:hover,
+        .cardclaim [class*="cardclaim-header-"] .author a:focus,
+        .cardclaim [class*="cardclaim-header-"] .author a:active,
+        .cardclaim[class*="bg-"] .author a:hover,
+        .cardclaim[class*="bg-"] .author a:focus,
+        .cardclaim[class*="bg-"] .author a:active {
+            color: #fff;
+        }
+
+.cardclaim .author .avatar {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.cardclaim .author a {
+    color: #3C4858;
+    text-decoration: none;
+}
+
+    .cardclaim .author a .ripple-container {
+        display: none;
+    }
+
+.cardclaim .cardclaim-category-social .fa {
+    font-size: 24px;
+    position: relative;
+    margin-top: -4px;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.cardclaim .cardclaim-category-social .material-icons {
+    position: relative;
+    top: 5px;
+}
+
+.cardclaim[class*="bg-"],
+.cardclaim[class*="bg-"] .cardclaim-body {
+    border-radius: 6px;
+}
+
+    .cardclaim[class*="bg-"] h1 small,
+    .cardclaim[class*="bg-"] h2 small,
+    .cardclaim[class*="bg-"] h3 small,
+    .cardclaim[class*="bg-"] .cardclaim-body h1 small,
+    .cardclaim[class*="bg-"] .cardclaim-body h2 small,
+    .cardclaim[class*="bg-"] .cardclaim-body h3 small {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+.cardclaim .cardclaim-stats {
+    background: transparent;
+    display: flex;
+}
+
+    .cardclaim .cardclaim-stats .author,
+    .cardclaim .cardclaim-stats .stats {
+        display: inline-flex;
+    }
+
+.cardclaim {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+    .cardclaim .table tr:first-child td {
+        border-top: none;
+    }
+
+    .cardclaim .cardclaim-title {
+        margin-top: 0;
+        margin-bottom: 3px;
+    }
+
+    .cardclaim .cardclaim-body {
+        padding: 0.9375rem 20px;
+        position: relative;
+    }
+
+        .cardclaim .cardclaim-body .form-group {
+            margin: 8px 0 0;
+        }
+
+    .cardclaim .cardclaim-header {
+        z-index: 3 !important;
+    }
+
+        .cardclaim .cardclaim-header .cardclaim-title {
+            margin-bottom: 3px;
+        }
+
+        .cardclaim .cardclaim-header .cardclaim-category {
+            margin: 0;
+        }
+
+        .cardclaim .cardclaim-header.cardclaim-header-text {
+            display: inline-block;
+        }
+
+            .cardclaim .cardclaim-header.cardclaim-header-text:after {
+                content: "";
+                display: table;
+            }
+
+            .cardclaim .cardclaim-header.cardclaim-header-icon i,
+            .cardclaim .cardclaim-header.cardclaim-header-text i {
+                width: 33px;
+                height: 33px;
+                text-align: center;
+                line-height: 33px;
+            }
+
+            .cardclaim .cardclaim-header.cardclaim-header-icon .cardclaim-title,
+            .cardclaim .cardclaim-header.cardclaim-header-text .cardclaim-title {
+                margin-top: 15px;
+                color: #3C4858;
+            }
+
+            .cardclaim .cardclaim-header.cardclaim-header-icon h4,
+            .cardclaim .cardclaim-header.cardclaim-header-text h4 {
+                font-weight: 300;
+            }
+
+        .cardclaim .cardclaim-header.cardclaim-header-tabs .nav-tabs {
+            background: transparent;
+            padding: 0;
+        }
+
+        .cardclaim .cardclaim-header.cardclaim-header-tabs .nav-tabs-title {
+            float: left;
+            padding: 10px 10px 10px 0;
+            line-height: 24px;
+        }
+
+    .cardclaim.cardclaim-plain .cardclaim-header.cardclaim-header-icon + .cardclaim-body .cardclaim-title,
+    .cardclaim.cardclaim-plain .cardclaim-header.cardclaim-header-icon + .cardclaim-body .cardclaim-category {
+        margin-top: -20px;
+    }
+
+    .cardclaim .cardclaim-actions {
+        position: absolute;
+        z-index: 1;
+        top: -50px;
+        width: calc(100% - 30px);
+        left: 17px;
+        right: 17px;
+        text-align: center;
+    }
+
+        .cardclaim .cardclaim-actions .cardclaim-header {
+            padding: 0;
+            min-height: 160px;
+        }
+
+        .cardclaim .cardclaim-actions .btn {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        .cardclaim .cardclaim-actions .fix-broken-cardclaim {
+            position: absolute;
+            top: -65px;
+        }
+
+    .cardclaim.cardclaim-chart .cardclaim-footer i:nth-child(1n+2) {
+        width: 18px;
+        text-align: center;
+    }
+
+    .cardclaim.cardclaim-chart .cardclaim-category {
+        margin: 0;
+    }
+
+    .cardclaim .cardclaim-body + .cardclaim-footer,
+    .cardclaim .cardclaim-footer {
+        padding: 0;
+        padding-top: 10px;
+        margin: 0 15px 10px;
+        border-radius: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .cardclaim .cardclaim-body + .cardclaim-footer h6,
+        .cardclaim .cardclaim-footer h6 {
+            width: 100%;
+        }
+
+        .cardclaim .cardclaim-body + .cardclaim-footer .stats,
+        .cardclaim .cardclaim-footer .stats {
+            color: #999999;
+            font-size: 12px;
+            line-height: 22px;
+        }
+
+            .cardclaim .cardclaim-body + .cardclaim-footer .stats .cardclaim-category,
+            .cardclaim .cardclaim-footer .stats .cardclaim-category {
+                padding-top: 7px;
+                padding-bottom: 7px;
+                margin: 0;
+            }
+
+            .cardclaim .cardclaim-body + .cardclaim-footer .stats .material-icons,
+            .cardclaim .cardclaim-footer .stats .material-icons {
+                position: relative;
+                top: 4px;
+                font-size: 16px;
+            }
+
+    .cardclaim [class*="cardclaim-header-"] {
+        margin: 0px 15px 0;
+        padding: 0;
+        position: relative;
+    }
+
+        .cardclaim [class*="cardclaim-header-"] .cardclaim-title + .cardclaim-category {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+            .cardclaim [class*="cardclaim-header-"] .cardclaim-title + .cardclaim-category a {
+                color: #fff;
+            }
+
+        .cardclaim [class*="cardclaim-header-"]:not(.cardclaim-header-icon):not(.cardclaim-header-text):not(.cardclaim-header-image) {
+            border-radius: 3px;
+            margin-top: -20px;
+            padding: 15px;
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .cardclaim-icon,
+        .cardclaim [class*="cardclaim-header-"] .cardclaim-text {
+            border-radius: 3px;
+            background-color: #999999;
+            padding: 15px;
+            margin-top: -20px;
+            margin-right: 15px;
+            float: left;
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .cardclaim-text {
+            float: none;
+            display: inline-block;
+            margin-right: 0;
+        }
+
+            .cardclaim [class*="cardclaim-header-"] .cardclaim-text .cardclaim-title {
+                color: #fff;
+                margin-top: 0;
+            }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .cardclaim-title {
+            color: #fff;
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .cardclaim-category {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.62);
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-label {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-grid {
+            stroke: rgba(255, 255, 255, 0.2);
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-point,
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-line,
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-bar,
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-slice-donut {
+            stroke: rgba(255, 255, 255, 0.8);
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-slice-pie,
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-area {
+            fill: rgba(255, 255, 255, 0.4);
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-series-a .ct-bar {
+            stroke-width: 10px;
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-point {
+            stroke-width: 10px;
+            stroke-linecap: round;
+        }
+
+        .cardclaim [class*="cardclaim-header-"] .ct-chart .ct-line {
+            fill: none;
+            stroke-width: 4px;
+        }
+
+    .cardclaim [data-header-animation="true"] {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        -moz-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        -o-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        -ms-transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: all 300ms cubic-bezier(0.34, 1.61, 0.7, 1);
+    }
+
+    .cardclaim:hover [data-header-animation="true"] {
+        -webkit-transform: translate3d(0, -50px, 0);
+        -moz-transform: translate3d(0, -50px, 0);
+        -o-transform: translate3d(0, -50px, 0);
+        -ms-transform: translate3d(0, -50px, 0);
+        transform: translate3d(0, -50px, 0);
+    }
+
+    .cardclaim .map {
+        height: 280px;
+        border-radius: 6px;
+        margin-top: 15px;
+    }
+
+        .cardclaim .map.map-big {
+            height: 420px;
+        }
+
+    .cardclaim .cardclaim-body.table-full-width {
+        padding: 0;
+    }
+
+    .cardclaim .cardclaim-plain .cardclaim-header-icon {
+        margin-right: 15px !important;
+    }
+
+.table-sales {
+    margin-top: 40px;
+}
+
+.iframe-container {
+    width: 100%;
+}
+
+    .iframe-container iframe {
+        width: 100%;
+        height: 500px;
+        border: 0;
+        box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+
+.cardclaim-wizard .nav.nav-pills .nav-item {
+    margin: 0;
+}
+
+    .cardclaim-wizard .nav.nav-pills .nav-item .nav-link {
+        padding: 6px 15px !important;
+    }
+
+.cardclaim-wizard .nav-pills:not(.flex-column) .nav-item + .nav-item:not(:first-child) {
+    margin-left: 0;
+}
+
+.cardclaim-wizard .nav-item .nav-link.active,
+.cardclaim-wizard .nav-item .nav-link:hover,
+.cardclaim-wizard .nav-item .nav-link:focus {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+.cardclaim-wizard .input-group-text {
+    padding: 6px 15px 0px !important;
+}
+
+.cardclaim-wizard .cardclaim-footer {
+    border-top: none !important;
+}
+
+.cardclaim-chart .cardclaim-body + .cardclaim-footer,
+.cardclaim-product .cardclaim-body + .cardclaim-footer {
+    border-top: 1px solid #eee;
+}
+
+.cardclaim-product .price {
+    color: inherit;
+}
+
+.cardclaim-collapse {
+    margin-bottom: 15px;
+}
+
+    .cardclaim-collapse .cardclaim .cardclaim-header a[aria-expanded="true"] {
+        color: #e91e63;
+    }
+
+.cardclaim-stats .cardclaim-header.cardclaim-header-icon,
+.cardclaim-stats .cardclaim-header.cardclaim-header-text {
+    text-align: right;
+}
+
+.cardclaim-stats .cardclaim-header .cardclaim-icon + .cardclaim-title,
+.cardclaim-stats .cardclaim-header .cardclaim-icon + .cardclaim-category {
+    padding-top: 10px;
+}
+
+.cardclaim-stats .cardclaim-header.cardclaim-header-icon .cardclaim-title,
+.cardclaim-stats .cardclaim-header.cardclaim-header-text .cardclaim-title,
+.cardclaim-stats .cardclaim-header.cardclaim-header-icon .cardclaim-category,
+.cardclaim-stats .cardclaim-header.cardclaim-header-text .cardclaim-category {
+    margin: 0;
+}
+
+.cardclaim-stats .cardclaim-header .cardclaim-category {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+    .cardclaim-stats .cardclaim-header .cardclaim-category:not([class*="text-"]) {
+        color: #999999;
+        font-size: 14px;
+    }
+
+.cardclaim-stats .cardclaim-header + .cardclaim-footer {
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.cardclaim-stats .cardclaim-header.cardclaim-header-icon i {
+    font-size: 36px;
+    line-height: 56px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+}
+
+.cardclaim-stats .cardclaim-body {
+    text-align: right;
+}
+
+.cardclaim-profile {
+    margin-top: 30px;
+    text-align: center;
+}
+
+    .cardclaim-profile .cardclaim-avatar {
+        margin: -50px auto 0;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 0;
+        box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+
+        .cardclaim-profile .cardclaim-avatar + .cardclaim-body {
+            margin-top: 15px;
+        }
+
+        .cardclaim-profile .cardclaim-avatar img {
+            width: 100%;
+            height: auto;
+        }
+
+    .cardclaim-profile .cardclaim-body + .cardclaim-footer {
+        margin-top: -15px;
+    }
+
+    .cardclaim-profile .cardclaim-footer .btn.btn-just-icon {
+        font-size: 20px;
+        padding: 12px 12px;
+        line-height: 1em;
+    }
+
+    .cardclaim-profile.cardclaim-plain .cardclaim-avatar {
+        margin-top: 0;
+    }
+
+    .cardclaim-profile .cardclaim-header:not([class*="cardclaim-header-"]) {
+        background: transparent;
+    }
+
+    .cardclaim-profile .cardclaim-avatar {
+        max-width: 130px;
+        max-height: 130px;
+    }
+
+.cardclaim-plain {
+    background: transparent;
+    box-shadow: none;
+}
+
+    .cardclaim-plain .cardclaim-header:not(.cardclaim-avatar) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cardclaim-plain .cardclaim-body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .cardclaim-plain .cardclaim-header-image {
+        margin: 0 !important;
+        border-radius: 6px;
+    }
+
+        .cardclaim-plain .cardclaim-header-image img {
+            border-radius: 6px;
+        }
+
+    .cardclaim-plain .cardclaim-footer {
+        padding-left: 5px;
+        padding-right: 5px;
+        background-color: transparent;
+    }

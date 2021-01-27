@@ -1,0 +1,58 @@
+﻿@model TestMvcApp.Models.ClsClaimOfficer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ClsClaimOfficer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+        <label>Claim Officer Id</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Claim_officer_idx)
+        </dd>
+
+        <dt>
+            <label>User Name</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            <label>Location</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            <label>Date Time</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datetime)
+        </dd>
+
+        <dt>
+            <label>Status</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActiveStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+    @Html.ActionLink("Back to List", "List")
+</p>
