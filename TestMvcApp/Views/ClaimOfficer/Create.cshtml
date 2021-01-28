@@ -4,70 +4,175 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<style type="text/css">
+
+    .labelstyle {
+        font-weight: 600;
+    }
+
+    .branchValidateSpan {
+        color: red;
+        font-size: 10px;
+        margin-left: 30px;
+    }
+</style>
+
 
 @using (Html.BeginForm("Create", "ClaimOfficer", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <h4>ClsClaimOfficer</h4>
-    <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-
-
-    <div class="form-group">
-        <label>User Name</label>
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label>Location</label>
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-lg-12">
+            <div class="card card-outline-info">
+                <div class="card-header">
+                    <h4 class="m-b-0 text-white" id="SetupText">Claim Officer</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-horizontal">
+                        <div class="form-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="txtNewUserName" class="labelstyle">Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <i class="ti-user"></i>
+                                                </span>
+                                            </div>
 
-            <div class="switch">
-                <label style="font-weight: 700;">
-                   
-                    In Active    @Html.CheckBoxFor(model => model.Statusid,true)   <span class="lever" style="font-weight: 700;"></span>Active
+
+                                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+
+
+                                        </div>
+                                        @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger center-block", @style = "font-family: Times New Roman ,Times, serif;" })
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="txtClaimOfficerLocation" class="labelstyle">Location</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-txtFullName">
+                                                    <i class="ti-location-pin"></i>
+                                                </span>
+                                            </div>
+                                            @Html.EditorFor(model => model.Location, new { htmlAttributes = new { @class = "form-control" } })
+
+                                        </div>
+                                        @Html.ValidationMessageFor(model => model.Location, "", new { @class = "text-danger center-block", @style = "font-family: Times New Roman ,Times, serif;" })
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="txtClaimOfficerLocation" class="labelstyle">User Type</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-txtFullName">
+                                                    <i class="ti-location-pin"></i>
+                                                </span>
+                                            </div>
+                                            @Html.DropDownListFor(model => model.UserType, new SelectList(Model.ClaimOfficerType, "Value", "Text"), "Select User Type..", new { @class = "form-control", @id = "ddlusertype" })
+
+                                        </div>
+                                        @Html.ValidationMessageFor(model => model.UserType, "", new { @class = "text-danger center-block", @style = "font-family: Times New Roman ,Times, serif;" })
+                                    </div>
+
+                                </div>
 
 
 
-                </label>
+                                <div class="col-md-6">
 
+                                    <br />
+                                    <div class="checkbox-inline">
+                                        <label class="checkbox checkbox-outline checkbox-success">
+
+                                            @Html.CheckBoxFor(model => model.Statusid, new { @id = "male", @checked = "checked" })
+                                            @*<input type="radio" name="radios15" />*@
+                                            <span> Active Status</span>
+                                        </label>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <br />
+
+
+
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center;">
+                                    @Html.ActionLink("Back to List", "List", "ClaimOfficer", new { @class = "btn btn-danger" })
+                                    @*<button id="btnClaimOfficerCancel" type="button" class="btn btn-danger">Cancel</button>*@
+                                    <button type="submit" id="BtnAddDetailClaimOfficer" class="btn btn-success">Submit</button>
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="row">
+                                <div class="table-responsive">
+                                    <table class="table table-striped" style="border: 3px solid #dee2e6;" id="tbl_BranchLimit">
+                                        <thead>
+                                            <tr>
+
+                                                <th>
+                                                    <input type="checkbox" style="opacity: unset; left: auto; width: 20px; height: 20px;" class="filled-in chk-col-red checkAll" />
+                                                    <span style="margin-left: 22px">Check All</span>
+                                                </th>
+                                                <th>Branch</th>
+                                                <th>
+                                                    Settlement Limit
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model.ClaimOfficerBranchList)
+                                            {
+                                            <tr>
+                                                <td> @Html.HiddenFor(T => item.BranchCode)
+                                                     @Html.CheckBoxFor(T => item.BranchChecked)</td>
+                                              
+
+                                                <td>@Html.DisplayFor(T => item.Branch)</td>
+
+                                                <td>@Html.TextBoxFor(T => item.SettlementAmount, new { @class = "form-control" })</td>
+                                            </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+
+                </div>
             </div>
-
         </div>
     </div>
-    <br />
-    @*<div class="form-group">
-        <label>Active Status</label>
-        <div class="col-md-10">
 
 
-            @Html.CheckBoxFor(model => model.Statusid, new { @checked = "checked" })
-            @Html.ValidationMessageFor(model => model.ActiveStatus, "", new { @class = "text-danger" })
-        </div>
-    </div>*@
 
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
-        </div>
-    </div>
-</div>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/custom-validator")
+} 

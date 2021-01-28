@@ -25,6 +25,18 @@ namespace TestMvcApp
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/custom-validator").Include(
+                               "~/Scripts/script-custom-validator.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+                        "~/Scripts/jquery.validate.js",
+                        "~/Scripts/jquery.validate.unobtrusive.js"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                       "~/Scripts/bootstrap.js",
+                       "~/Scripts/respond.js"));
+
         }
     }
 }

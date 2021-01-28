@@ -158,6 +158,8 @@ E:\hicl_Projects\TestMvcApp\TestMvcApp\obj\Debug\TestMvcApp.csproj.CoreCompileIn
 E:\hicl_Projects\TestMvcApp\TestMvcApp\obj\Debug\TestMvcApp.csproj.CopyComplete
 E:\hicl_Projects\TestMvcApp\TestMvcApp\obj\Debug\TestMvcApp.dll
 E:\hicl_Projects\TestMvcApp\TestMvcApp\obj\Debug\TestMvcApp.pdb
+D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.csproj.CoreCompileInputs.cache
+D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.csprojAssemblyReference.cache
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\TestMvcApp.dll.config
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\TestMvcApp.dll
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\TestMvcApp.pdb
@@ -233,8 +235,6 @@ D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\System.Web.WebPages.R
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\Newtonsoft.Json.xml
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\Antlr3.Runtime.pdb
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.csprojAssemblyReference.cache
-D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.csproj.CoreCompileInputs.cache
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.csproj.CopyComplete
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.dll
 D:\Latest Github Projects Apr-2020\Test-MVC\TestMvcApp\obj\Debug\TestMvcApp.pdb

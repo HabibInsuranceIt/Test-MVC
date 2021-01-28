@@ -3,56 +3,124 @@
 @{
     ViewBag.Title = "Details";
 }
+<style type="text/css">
+    .pDetailTextP {
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        color: brown;
+        font-size: 12px;
+    }
+</style>
+<div class="row page-titles" style="padding-bottom: 7px;">
+    <div class="col-md-5 align-self-center ViewTitle">
+        <h3 class="text-themecolor" style="font-weight: 800">Claim Officer Details</h3>
+    </div>
+    <div class="col-md-7 align-self-center ViewTitle">
+        <div class="ViewTitleLeft">
+        </div>
+    </div>
 
-<h2>Details</h2>
-
-<div>
-    <h4>ClsClaimOfficer</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-        <label>Claim Officer Id</label>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Claim_officer_idx)
-        </dd>
-
-        <dt>
-            <label>User Name</label>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-
-        <dt>
-            <label>Location</label>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
-        </dd>
-
-        <dt>
-            <label>Date Time</label>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Datetime)
-        </dd>
-
-        <dt>
-            <label>Status</label>
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ActiveStatus)
-        </dd>
-
-    </dl>
 </div>
-<p>
-    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
-    @Html.ActionLink("Back to List", "List")
-</p>
+<div class="card-body" style="padding: 0.25rem;">
+    <div class="container-fluid page-titles">
+
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-groupCustom row">
+                    <label class="pDetailLabel col-md-4">Claim Officer Name:</label>
+                    <div class="col-md-8">
+                        <p class="pDetailTextP"> @Html.DisplayFor(model => model.Username)</p>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-groupCustom row">
+                    <label class="pDetailLabel col-md-4">Location:</label>
+                    <div class="col-md-8">
+                        <p class="pDetailTextP"> @Html.DisplayFor(model => model.Location, new { @class = "pDetailTextP" })</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-groupCustom row">
+                    <label class="pDetailLabel col-md-4">Date Time:</label>
+                    <div class="col-md-8">
+                        <p class="pDetailTextP">     @Html.DisplayFor(model => model.Datetime, new { @class = "pDetailTextP" })</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--/span-->
+            <!--/span-->
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-groupCustom row">
+                    <label class="pDetailLabel col-md-4">Active Status:</label>
+                    <div class="col-md-8">
+                        <p class="pDetailTextP">   @Html.DisplayFor(model => model.ActiveStatus, new { @class = "pDetailTextP" })</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--/span-->
+            <!--/span-->
+        </div>
+
+    </div>
+</div>
+
+<div class="row page-titles" style="padding-bottom: 7px;">
+    <div class="col-md-5 align-self-center ViewTitle">
+        <h3 class="text-themecolor" style="font-weight: 800">Approval Rights</h3>
+    </div>
+    <div class="col-md-7 align-self-center ViewTitle">
+        <div class="ViewTitleLeft">
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid page-titles">
+    <br />
+
+
+    <div class="row">
+        <div class="table-responsive">
+            <table class="table table-striped" style="border: 3px solid #dee2e6;" id="tbl_ViewClaimOfficerBranchLimit">
+                <thead>
+                    <tr>
+
+                        <th>Branch Code</th>
+                        <th>Branch</th>
+                        <th>Settlement Limit
+
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            @Html.ActionLink("Cancel","List","ClaimOfficer", new { @class = "btn btn-danger" })
+           
+
+
+        </div>
+    </div>
+</div>
+
