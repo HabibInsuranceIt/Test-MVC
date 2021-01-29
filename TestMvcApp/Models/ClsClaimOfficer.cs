@@ -29,7 +29,7 @@ namespace TestMvcApp.Models
         public string SettlementAmount { get; set; }
         public bool BranchChecked { get; set; }
         public string BranchCode { get; set; }
-        public string Branch { get; set; }
+        public string BranchCode { get; set; }
         public SelectList ClaimOfficerType { get; set; }
 
         public List<ClsClaimOfficer> ClaimOfficerBranchList { get; set; }
